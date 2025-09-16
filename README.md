@@ -8,5 +8,5 @@ This repo documents my daily learning and practice in cybersecurity, focused on 
 
 ## Progress
 - [x] Day 1: Recon basics (robots.txt, sitemap, headers)
-- [ ] Day 2: Enumeration deep dive
+- [] Day 2: Enumeration deep dive
 - [ ] Day 3: Subdomain discovery
