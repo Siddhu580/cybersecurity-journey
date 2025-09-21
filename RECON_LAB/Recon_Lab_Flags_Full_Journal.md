@@ -1,7 +1,7 @@
 
 # **Info Gathering & Recon LAB – Full Documentation**
 
-This is my raw, step-by-step lab journal for capturing all **5 flags**. I documented my terminal outputs, thought process, mistakes, learnings, and of course the **BOOOM moments** 😎.
+This is my raw, step-by-step lab journal for capturing all **5 flags**. I documented my terminal outputs, thought process, mistakes, learnings.
 
 Screenshots are referenced in the doc — just put them in `images/` folder with the same names.
 
@@ -58,7 +58,7 @@ Output highlights:
 * Target: `192.188.120.3` (HTTP open)
 * Our host: `192.188.120.2`
 
-**Screenshot:** `![Nmap Scan](images/nmap_scan.png)`
+![nmap scan](images/nmap_scan.png)
 
 #### **netdiscover**
 
@@ -71,7 +71,7 @@ Output highlights:
 * Found router & target via ARP
   **Learning:** ARP packet mapping MAC ↔ IP.
 
-**Screenshot:** `images/netdiscover_scan.png`
+![netdiscover scan](images/netdiscover.png)
 
 ---
 
@@ -88,7 +88,8 @@ Apache[2.4.41], WordPress[6.5.3 - FLAG2{c1143664e8a046fcb67ae2e5e8d72fc1}]
 ```
 
 * **FLAG2 captured!**
-  **Screenshot:** `images/whatweb_flag2.png`
+
+![whatweb flag2](images/whatweb_flag2.png)
 
 **Learning:** Outdated WP version → potential attack surface.
 
@@ -106,7 +107,7 @@ Allow: /wp-admin/admin-ajax.php
 
 * **FLAG1:** `FLAG1{444198e2bb104064a9f086fe162682b0}`
 
-**Screenshot:** `images/robots_flag1.png`
+![robots.txt flag1](images/robots_flag1.png)
 
 ---
 
@@ -126,7 +127,8 @@ curl target.ine.local/wp-content/uploads/flag.txt
 
 * **FLAG3:** `FLAG3{8c7feaae140146bba2cf1f6507a63b97}`
 
-**Screenshot:** `images/gobuster_flag3.png`
+![gobuster flag3](images/gobuster_flag3.png)
+![curl flag3](images/curl_flag3.png)
 
 ---
 
@@ -140,7 +142,7 @@ curl target.ine.local/wp-config.bak | grep -e "FLAG"
 
 * **FLAG4:** `FLAG4{ce10b42a37d047b19d15b29620d5489a}`
 
-**Screenshot:** `images/backup_flag4.png`
+![backup flag4](images/backup_flag4.png)
 
 ---
 
@@ -160,7 +162,9 @@ grep -r "FLAG" ~/target.ine.local/
 
 * **FLAG5:** `FLAG5{6c5c1874d6df4aeebb0ad2f56aefa0b5}`
 
-**Screenshot:** `images/httrack_flag5.png`
+![httrack running](images/httrack_running.png)
+![mirrored dir](images/mirrored_dir.png)
+![grep flag5](images/grep_flag5.png)
 
 **Learning:** Local grep search on mirrored site is a lifesaver!
 
@@ -186,7 +190,11 @@ grep -r "FLAG" ~/target.ine.local/
 * Robots.txt can leak sensitive paths
 * Backup files & mirrored sites = hidden gold.
 
-**BOOOM moments included** — found all flags step by step, learned a ton, and documented my mistakes 😎.
+found all flags"which suprised me too" step by step, learned a ton, and documented my mistakes 😎.
 
+---
 
+If you want, I can also **write the `README.md` for this RECON\_LAB folder** so it looks clean on GitHub with the folder structure, images, and a short overview.
+
+Do you want me to do that next?
 
