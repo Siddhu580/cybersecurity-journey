@@ -58,7 +58,7 @@ Output highlights:
 * Target: `192.188.120.3` (HTTP open)
 * Our host: `192.188.120.2`
 
-**Screenshot:** `images/nmap_scan.png`
+**Screenshot:** `![Nmap Scan](images/nmap_scan.png)`
 
 #### **netdiscover**
 
