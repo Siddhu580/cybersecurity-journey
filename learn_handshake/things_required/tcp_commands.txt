@@ -1,0 +1,17 @@
+# Create Python server folder
+mkdir python_ser
+cd python_ser
+
+# Create index.html file
+gedit index.html
+# (Inside index.html write: <h1>TCP HANDSHAKE Learning</h1>)
+
+# Start Python HTTP server on port 8002
+python3 -m http.server 8002
+
+# Capture TCP packets on port 8002 using tcpdump
+sudo tcpdump -i lo tcp port 8002 -w ~/python_ser/LEARN.pcap
+
+# Generate HTTP traffic to server
+curl http://127.0.0.1:8002/
+

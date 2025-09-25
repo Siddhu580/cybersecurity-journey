@@ -1,0 +1,22 @@
+# Wireshark Setup for TCP Handshake Lab
+
+1. Open Wireshark
+2. Click on "Capture" -> "Options"
+3. Select interface: Loopback (lo)
+4. Apply filter to view only TCP traffic for port 8002:
+   tcp.port == 8002
+5. Open captured file:
+   File -> Open -> LEARN.pcap
+6. Analyze the handshake:
+   - First packet: SYN from client
+   - Second packet: SYN+ACK from server
+   - Third packet: ACK from client
+7. Follow the TCP Stream:
+   Right-click on a packet -> Follow -> TCP Stream
+8. Observe sequence numbers, acknowledgment numbers, flags (SYN, ACK, FIN, PSH)
+9. Use coloring rules to highlight important packets:
+   - SYN packets: Blue
+   - SYN+ACK packets: Green
+   - ACK packets: Yellow
+   - FIN packets: Red
+
